@@ -8,9 +8,9 @@
 
 require "faker"
 
-200.times do
-  Order.create(
-    dish:  Faker::Food.dish,
-    price: Faker::Commerce.price(range: 0..29.99, as_string: true)
+10.times do
+  Restaurant.create(
+    name:        Faker::Restaurant.name,
+    description: Faker::Restaurant.description
   )
 end
