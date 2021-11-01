@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "faker"
+
+200.times do
+  Order.create(
+    dish:  Faker::Food.dish,
+    price: Faker::Commerce.price(range: 0..29.99, as_string: true)
+  )
+end
