@@ -8,9 +8,11 @@
 
 require "faker"
 
-10.times do
+Restaurant.destroy_all
+
+200.times do
   Restaurant.create(
-    name:        Faker::Restaurant.name,
-    description: Faker::Restaurant.description
+    name:        Faker::Restaurant.unique.name,
+    description: Faker::Restaurant.unique.description
   )
 end

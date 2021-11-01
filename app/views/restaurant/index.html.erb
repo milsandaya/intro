@@ -1,5 +1,7 @@
 <h1>Restaurants</h1>
 
+<%= paginate @restaurants %>
+
 <ul>
   <% @restaurants.each do |restaurant| %>
     <li>
